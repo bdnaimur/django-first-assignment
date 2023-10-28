@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Food Menu Page{% endblock %}
+
+{%block content%}
+
+<div class="row">
+    <div class="col" style="display: flex; flex-wrap: wrap; justify-content:space-around; align-items: center; ">
+      {% for item in meals %}
+      <div class="card" style="width: 18rem; margin-bottom: 30px;">
+        <!-- Card Image -->
+        <img
+          src="{{ item.strMealThumb }}"
+          class="card-img-top"
+          alt="Card Image"
+        />
+        <div class="card-body">
+          <!-- Card Title -->
+          <h5 class="card-title">{{ item.strMeal }}</h5>
+          <!-- Card Text -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            iure, magni magnam sed inventore
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {%endblock%}

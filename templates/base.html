@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>{% block title %}Home Page{% endblock %}</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <h1 style="text-align: center;">First Assigment</h1>
+   {%block content%}{%endblock%}
+</div>
+
+<div data-myarray="{{ meals|escapejs }}"></div>
+
+
+<!-- <script>
+    // Retrieve the variable's value from the data attribute
+    var myArrayValue = document.querySelector("[data-myarray]").getAttribute("data-myarray");
+    
+    // Convert the JSON string to a JavaScript object (assuming it's an array)
+    // console.log("myArrayValue", JSON.parse(myArrayValue));
+    // var myArray = JSON.parse(myArrayValue);
+
+    // Log the array to the console
+    // console.log(myArray);
+
+    try {
+    var myArray = JSON.parse(myArrayValue);
+    console.log("test error");
+} catch (error) {
+    console.error("JSON parsing error:", error);
+    // Handle the error, e.g., provide a default value or show an error message.
+}
+
+</script> -->
+
+  </body>
+</html>
